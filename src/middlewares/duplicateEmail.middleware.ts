@@ -1,6 +1,6 @@
-import { Request, Response, NextFunction } from "express";
-import { AppDataSource } from "../data-source";
-import { User } from "../entities/user.entity";
+import { Request, Response, NextFunction } from 'express';
+import { AppDataSource } from '../data-source';
+import { User } from '../entities/user.entity';
 
 const duplicateEmail = async (
   req: Request,
@@ -15,10 +15,10 @@ const duplicateEmail = async (
 
   if (user) {
     res.statusCode = 422;
-    return res.json({ error: "email already exists" });
+    return res.json({ error: 'email already exists' });
   }
 
-  next();
+  return next();
 };
 
 export default duplicateEmail;

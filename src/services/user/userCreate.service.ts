@@ -1,6 +1,6 @@
-import { AppDataSource } from "../../data-source";
-import { User } from "../../entities/user.entity";
-import { IUser } from "../../interfaces/user";
+import { AppDataSource } from '../../data-source';
+import { User } from '../../entities/user.entity';
+import { IUser } from '../../interfaces/user';
 
 const userCreateService = async ({ email, name, age }: IUser) => {
   const userRepository = AppDataSource.getRepository(User);
